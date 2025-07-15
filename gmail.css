@@ -313,7 +313,6 @@ header{
         position: absolute;
         top: 35px;
         left: 20px;
-        /*bottom: 30px;*/
         transform: translateY(-50%);
     }
 
@@ -543,7 +542,7 @@ header{
 }
 
 .top-toolbar button:hover {
-  background-color: rgba(60, 64, 67, 0.1); /* light gray hover */
+  background-color: rgba(60, 64, 67, 0.1); 
 }
 
 .top-toolbar img {
@@ -826,7 +825,7 @@ header{
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: nowrap; /* Don't break lines */
+  flex-wrap: nowrap; 
   white-space: nowrap;
 }
 
@@ -892,7 +891,7 @@ header{
   }
 
   .tabs {
-    display: none; /* hide desktop tabs */
+    display: none; 
   }
 
   .tab-menu-button {
@@ -910,7 +909,7 @@ header{
   flex-direction: column;
   background-color: #ffffff;
   position: absolute;
-  top: 39px; /* Adjust based on your top bar height */
+  top: 39px; 
   left: 0;
   right: 0;
   z-index: 999;
@@ -933,7 +932,7 @@ header{
   }
 
   .tabs-toggle-list .tab-btn {
-  margin-bottom: 5px; /* Increase as needed */
+  margin-bottom: 5px;
   margin-top: 10px;
   }
 
@@ -980,10 +979,4 @@ header{
     justify-content: space-between;
     width: 100%;
   }
-
-  /*.navigation-controls button {
-    flex: 1 1 auto;
-    font-size: 13px;
-    padding: 8px;
-  }*/
 }
