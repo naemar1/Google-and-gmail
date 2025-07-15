@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gmail Inbox</title>
+        <link rel="stylesheet" href="gmail.css"/>
+    </head>
+
+    <body>
+
+        <input type="checkbox" id="menu-toggle" hidden>
+
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-left">
+                    <label for="menu-toggle" class="menu">
+                        <img src="menu-removebg-preview.png" alt="Menu" width="40" height="20"/>
+                    </label>
+                    <a class="logo-link" href="#">
+                        <img src="gmail-removebg-preview.png" alt="Gmail" width="50" height="50"/>
+                        Gmail
+                    </a>
+                </div>
+                <div class="search-box">
+                    <img src="search-removebg-preview.png" alt="Search" width="15" height="15"/>
+                    <input type="text" placeholder="Search Mail" />
+                    <button class="filter">
+                        <img src="filter-removebg-preview.png" alt="Search Filter" height="20"/>
+                    </button>
+                </div>
+                <div class="nav-right">
+                    <span class="icon">
+                        <img src="help.png" alt="Help" height="20"/>
+                    </span>
+                    <span class="icon">
+                        <img src="settings-removebg-preview.png" alt="Settings" height="20"/>
+                    </span>
+                    <span class="icon">
+                        <img src="gemini-removebg-preview.png" alt="Gemini" height="20"/>
+                    </span>
+                    <span class="icon">
+                        <img src="grid-1-512.webp" alt="Grid" height="20"/>
+                    </span>
+                    <span class="profile">N</span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar">
+                <button class="compose-btn">
+                    <a href="#" class="compose-font">
+                        <img src="compose-removebg-preview.png" alt="Compose Icon" height="30">
+                        Compose
+                    </a>
+                </button>
+
+                <div class="sidebar-content-wrapper">
+                    <nav class="sidebar-nav">
+                        <a href="#" class="active sidebar-link">
+                            <span class="icon-wrapper">
+                                <img src="inbox-removebg-preview.png" alt="Inbox" height="20" width="20" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">Inbox</span>
+                        </a>
+                        <a href="#" class="sidebar-link">
+                            <span class="icon-wrapper">
+                                <img src="starred.png" alt="Starred" height="20" width="20" class="sidebar-icon"/>
+                            </span>    
+                            <span class="link-text">Starred</span>
+                        </a>                        
+                        <a href="#" class="sidebar-link">
+                            <span class="icon-wrapper">
+                                <img src="snoozed-removebg-preview.png" alt="Snoozed" height="20" width="20" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">Snoozed</span>
+                        </a>
+                        <a href="#" class="sidebar-link">
+                            <span class="icon-wrapper">
+                                <img src="sent-removebg-preview.png" alt="Sent" height="40" width="40" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">Sent</span>
+                        </a>    
+                        <a href="#" class="sidebar-link">
+                            <span class="icon-wrapper">
+                                <img src="draft-removebg-preview.png" alt="Drafts" height="15" width="10" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">Drafts</span>
+                        </a>                    
+                        <input type="checkbox" id="toggle-more" hidden>
+                        <label for="toggle-more" class="toggle-more sidebar-toggle-effect">
+                            <span class="icon-wrapper">
+                                <img src="down arrow-Photoroom.png" alt="More" width="20" height="20" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">More</span>
+                        </label>
+                        <label for="toggle-more" class="toggle-less sidebar-toggle-effect">
+                            <span class="icon-wrapper">
+                                <img src="up-arrow.jpg" alt="More" width="20" height="20" class="sidebar-icon"/>
+                            </span>
+                            <span class="link-text">Less</span>
+                        </label>
+                        <div class="more-options">
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="important-removebg-preview.png" alt="Important" height="40" width="40" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Important</span>
+                            </a>
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="scheduled-removebg-preview.png" alt="Scheduled" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Scheduled</span>
+                            </a>
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="all_mail-removebg-preview.png" alt="All Mail" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">All Mail</span>
+                            </a>                        
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="spam-removebg-preview.png" alt="Spam" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Spam</span>
+                            </a>
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="trash-removebg-preview.png" alt="Trash" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Trash</span>
+                            </a>
+                            <input type="checkbox" id="toggle-subcategories" hidden>
+                            <label for="toggle-subcategories" class="toggle-subcategories-more sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="categories-removebg-preview.png" alt="Categories" height="20" width="20"/>
+                                </span>
+                                <span class="link-text">Categories</span>
+                                &#9662;
+                            </label>
+                            <label for="toggle-subcategories" class="toggle-subcategories-less sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="categories-removebg-preview.png" alt="Categories" height="20" width="20"/>
+                                </span> 
+                                <span class="link-text">Categories</span>
+                                &#9652;
+                            </label>
+                            <div class="categories-options">
+                                <a href="#" class="sidebar-link">
+                                    <span class="icon-wrapper">
+                                        <img src="social-removebg-preview.png" alt="Social" height="20" width="20" class="sidebar-icon"/>
+                                    </span>
+                                    <span class="link-text">Social</span>
+                                </a>
+                                <a href="#" class="sidebar-link">
+                                    <span class="icon-wrapper">
+                                        <img src="updates-removebg-preview.png" alt="Updates" height="20" width="20" class="sidebar-icon"/>
+                                    </span>
+                                    <span class="link-text">Updates</span>
+                                </a>
+                                <a href="#" class="sidebar-link">
+                                    <span class="icon-wrapper">
+                                        <img src="forums.png" alt="Forums" height="20" width="20" class="sidebar-icon"/>
+                                    </span>
+                                    <span class="link-text">Forums</span>
+                                </a>
+                                <a href="#" class="sidebar-link">
+                                    <span class="icon-wrapper">
+                                        <img src="promotions-removebg-preview.png" alt="Promotions" height="20" width="20" class="sidebar-icon"/>
+                                    </span>
+                                    <span class="link-text">Promotions</span>
+                                </a>
+                            </div>
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="manage_subscriptions-removebg-preview.png" alt="Subscriptions" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Manage Subscriptions</span>
+                            </a>
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="manage_labels-removebg-preview.png" alt="Labels" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Manage Labels</span>
+                            </a>    
+                            <a href="#" class="sidebar-link">
+                                <span class="icon-wrapper">
+                                    <img src="plus-removebg-preview.png" alt="Create" height="20" width="20" class="sidebar-icon"/>
+                                </span>
+                                <span class="link-text">Create New Label</span>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div class="labels-style">
+                        <span class="link-text">Labels</span>
+                        <span><img src="plus-removebg-preview.png" alt="plus" height="20" width="20" class="add-icon"/></span>
+                    </div>
+                </div>
+
+                <div class="upgrade-section">
+                    <button class="upgrade-btn">
+                        <span class="icon">
+                            <img src="number-circle-one-removebg-preview.png" alt="Upgrade" height="25" width="45"/>
+                        </span>
+                        <span class="upgrade-text">Upgrade</span>
+                        <span class="arrow">
+                            <img src="ryt-arrow.png" alt="arrow" height="20" width="20"/>
+                        </span>
+                    </button>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <section class="email-list">
+                    <div class="top-toolbar">
+                        <div class="toolbar-left">
+                            <input type="checkbox" title="Select all" />
+                            <button title="Refresh"><img src="refresh-removebg-preview.png" alt="Refresh" /></button>
+                            <button title="More"><img src="three.png" alt="More Options" /></button>
+                        </div>
+                        <div class="toolbar-right">
+                            <span class="email-range">1–100 of 2,044</span>
+                            <div class="navigation-controls">
+                                <button class="prev-btn">&#8592;</button>
+                                <button class="next-btn">&#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="tabs" aria-label="Email categories">
+                        <button class="tab-btn tab-primary active-tab" aria-label="Primary">
+    <img src="inbox-removebg-preview.png" class="tab-icon" alt="Primary" />
+    <span class="tab-label">Primary</span>
+    
+  </button>
+  <button class="tab-btn tab-promotions" aria-label="Promotions">
+    <img src="promotions-removebg-preview.png" class="tab-icon" alt="Promotions" />
+    <span class="tab-label">Promotions</span>
+    <span class="badge badge-green">1 new</span>
+  </button>
+  <button class="tab-btn tab-social" aria-label="Social">
+    <img src="social-removebg-preview.png" class="tab-icon" alt="Social" />
+    <span class="tab-label">Social</span>
+    <span class="badge badge-blue">3 new</span>
+  </button>
+  <button class="tab-btn tab-updates" aria-label="Updates">
+    <img src="updates-removebg-preview.png" class="tab-icon" alt="Updates" />
+    <span class="tab-label">Updates</span>
+    <span class="badge badge-orange">3 new</span>
+  </button>
+</nav>
+<div class="tab-toggle-wrapper">
+<!-- Hidden checkbox as toggle controller -->
+<input type="checkbox" id="tab-toggle" class="tab-toggle" hidden />
+
+<!-- Styled label acts like a button -->
+<label for="tab-toggle" class="tab-menu-button" aria-label="Toggle Tabs">
+  <span class="menu-icon">
+    <img src="menu-removebg-preview.png" alt="Menu Icon" width="30px" height="15px"/>
+    </span>
+    <span class="close-icon">
+        <img src="close-removebg-preview.png" alt="Close" width="29px" height="29px"></span>
+</label>
+
+<!-- Tabs -->
+<nav class="tabs-toggle-list">
+  <button class="tab-btn tab-primary active-tab">
+    <img src="inbox-removebg-preview.png" class="tab-icon" alt="Primary" />
+    Primary
+</button>
+  <button class="tab-btn tab-promotions">
+    <img src="promotions-removebg-preview.png" class="tab-icon" alt="Promotions" />
+    Promotions</button>
+  <button class="tab-btn tab-social">
+    <img src="social-removebg-preview.png" class="tab-icon" alt="Social" />
+    Social</button>
+  <button class="tab-btn tab-updates">
+    <img src="updates-removebg-preview.png" class="tab-icon" alt="Updates" />Updates</button>
+</nav>
+</div>
+                    <article class="email-item" role="listitem">
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">Google</h5>
+                        <p class="mail-subject">Your monthly activity summary</p>
+                        <time class="mail-time">8:42 AM</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                        </div>
+
+                    </article>
+                    
+                    <article class="email-item" role="listitem">
+
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">  IBM via LinkedIn</h5>
+                        <p class="mail-subject">Meet IBM Quantum Starling</p>
+                        <time class="mail-time">10:29 AM</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                        </div>
+                    </article>
+
+
+                    <article class="email-item" role="listitem">
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+  
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">LinkedIn</h5>
+                        <p class="mail-subject">ZenoTalent is hiring a Data Science Intern</p>
+                        <time class="mail-time">8:42 AM</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                        </div>
+                    </article>
+
+                    <article class="email-item" role="listitem">
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+  
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">OpenAI Team</h5>
+                        <p class="mail-subject">Introducing GPT-4o smarter, faster</p>
+                        <time class="mail-time">6:12 AM</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                        </div>
+                    </article>
+
+                    <article class="email-item" role="listitem">
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+  
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">Google Workspace</h5>
+                        <p class="mail-subject">Your monthly activity summary</p>
+                        <time class="mail-time">Mon</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                        </div>
+                    </article>
+
+                    <article class="email-item" role="listitem">
+                        <input type="checkbox" class="mail-checkbox" aria-label="Select email">
+  
+                        <button class="mail-star" aria-label="Starred">
+                            <img src="bookmark-removebg-preview.png" alt="Star" class="star-icon" />
+                        </button>
+
+                        <h5 class="mail-sender">GitHub</h5>
+                        <p class="mail-subject">Security alert in your repository</p>
+                        <time class="mail-time">Tue</time>
+
+                        <div class="email-actions">
+                            <button title="Archive"><img src="archive-removebg-preview.png" alt="Archive" /></button>
+                            <button title="Delete"><img src="trash-removebg-preview.png" alt="Delete" /></button>
+                            <button title="Mark as read"><img src="mark.png" alt="Mark as read" /></button>
+                            <button title="Snooze"><img src="snoozed-removebg-preview.png" alt="Snooze" /></button>
+                         </div>
+                    </article>
+
+                </section>
+            </main>
+        </div>
+   
+    </body>
+</html>
